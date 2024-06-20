@@ -1,13 +1,9 @@
 environment:
   nodejs_version: "20"
 
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+trigger:
+  - master
+  - pull_request
 
 cache: node_modules  # кеширование
 

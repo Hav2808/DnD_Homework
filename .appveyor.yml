@@ -1,9 +1,13 @@
 environment:
   nodejs_version: "20"
 
-branches:
-  only:
-    - master  # ветка git
+bon:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 cache: node_modules  # кеширование
 

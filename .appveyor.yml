@@ -1,7 +1,7 @@
 environment:
   nodejs_version: "20"
 
-bon:
+on:
   push:
     branches:
       - master

@@ -6,13 +6,10 @@ build:
     only:
       - master
 
-      
 cache: node_modules  # кеширование
 
 install:
   - yarn install  # команда установки зависимостей
-
-build: off  # отключаем встроенную в appveyor систему сборки
 
 build_script:
   - yarn build   # команда сборки

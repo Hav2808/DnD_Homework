@@ -51,6 +51,7 @@
     "eslint-plugin-jest": "^28.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "2.7.1",
+    "push-dir": "^0.4.1",
     "webpack": "^5.75.0",
     "webpack-dev-server": "^4.11.1",
     "webpack-merge": "^5.8.0"

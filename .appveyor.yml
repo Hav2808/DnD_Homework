@@ -23,8 +23,3 @@ deploy_script:  # скрипт развёртывания
   - git config --global user.name AppVeyor
   - git config --global user.email ci@appveyor.com
   - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > "$HOME/.git-credentials"
-  
-deploy:
-     provider: Script
-     script: |
-       curl -H "Authorization: token $env:GITHUB_TOKEN" -X POST https://api.github.com/repos/username/repo/releases

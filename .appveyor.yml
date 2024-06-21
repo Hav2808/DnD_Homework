@@ -1,11 +1,10 @@
-eimage: Ubuntu1804  # образ для сборки
-
-stack: node 18  # окружение
+environment:
+  nodejs_version: "20"
 
 branches:
   only:
-    - master  # ветка git
-    
+    - main  # ветка git
+
 cache: node_modules  # кеширование
 
 install:

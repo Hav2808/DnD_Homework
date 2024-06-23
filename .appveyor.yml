@@ -1,6 +1,7 @@
 image: Ubuntu2004  # образ для сборки
 
-version: 1.0.76
+
+version: 1.0.{build}
 
 stack: node 18  # окружение
 

@@ -1,26 +1,27 @@
-environment:
-  nodejs_version: "20"
+image: Ubuntu1804  # образ для сборки
+
+stack: node 14  # окружение
 
 branches:
   only:
-    - main  # ветка git
+    - master  # ветка git
 
 cache: node_modules  # кеширование
 
 install:
-  - yarn install  # команда установки зависимостей
+  - yarn  # команда установки зависимостей
 
 build: off  # отключаем встроенную в appveyor систему сборки
 
 build_script:
-  - yarn build   # команда сборки
+  - yarn run build   # команда сборки
 
 test_script:
-  - yarn lint  # скрипт тестирования
+  - yarn run lint && yarn test  # скрипт тестирования
 
 deploy_script:  # скрипт развёртывания
   - git config --global credential.helper store
   - git config --global user.name AppVeyor
   - git config --global user.email ci@appveyor.com
   - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > "$HOME/.git-credentials"
-  - npx gh-pages -d dist -u "appveyor-bot <ci@appveyor.com>" --no-prompt
+  - npx push-dir --dir=dist --branch=gh-pages --force --verbose

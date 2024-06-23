@@ -1,9 +1,9 @@
 image: Ubuntu2004  # образ для сборки
 
+version: 1.0.76
+
 stack: node 18  # окружение
 
-environment:
-  SSH_KEY: $(GIT_SSH_KEY)
 
 branches:
   only:

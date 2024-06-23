@@ -2,6 +2,9 @@ image: Ubuntu2004  # образ для сборки
 
 stack: node 18  # окружение
 
+environment:
+  GITHUB_TOKEN: $GITHUB_TOKEN_VALUE 
+
 branches:
   only:
     - master  # ветка git

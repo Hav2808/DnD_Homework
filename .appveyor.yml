@@ -1,29 +1,31 @@
+name: github-pages
+
+on:
+  push:
+    branches:
+      - master
+
 environment:
   nodejs_version: "20"
   name: github-pages
   url: ${{steps.deployment.outputs.psge_url}}
-  
-branches:
-  only:
-    - main  # ветка git
 
-cache: node_modules  # кеширование
+cache: node_modules
 
 install:
-  - yarn install  # команда установки зависимостей
+  - yarn install
 
-build: off  # отключаем встроенную в appveyor систему сборки
+build: off
 
 build_script:
-  - yarn build   # команда сборки
+  - yarn build
 
 test_script:
-  - yarn lint  # скрипт тестирования
+  - yarn lint
 
-deploy_script:  # скрипт развёртывания
+deploy_script:
   - git config --global credential.helper store
   - git config --global user.name AppVeyor
   - git config --global user.email ci@appveyor.com
   - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > "$HOME/.git-credentials"
   - npx push-dir --dir=dist --branch=gh-pages --force --verbose
-

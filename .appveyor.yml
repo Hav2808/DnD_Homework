@@ -27,4 +27,4 @@ deploy_script:  # скрипт развёртывания
   - git config --global user.name AppVeyor
   - git config --global user.email ci@appveyor.com
   #- npx gh-pages -d dist -u "git@github.com:Hav2808/DnD_Homework.git" --ssh-key-path=$(SSH_KEY)
-  - npx gh-pages -d dist -u "git@github.com:Hav2808/DnD_Homework.git" --repo https://github.com/Hav2808/DnD_Homework.git
+  - npx gh-pages -d dist --repo https://github.com/Hav2808/DnD_Homework.git

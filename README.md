@@ -1,5 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/oh4pwt1lx3wiyep6?svg=true)](https://ci.appveyor.com/project/Hav2808/dnd-homework)
-
+[![Build status](https://ci.appveyor.com/api/projects/status/oh4pwt1lx3wiyep6/branch/master?svg=true)](https://ci.appveyor.com/project/Hav2808/dnd-homework/branch/master)
 
 # Домашнее задание к занятию "6. Работа с файлами, DnD"
 Правила сдачи задания:

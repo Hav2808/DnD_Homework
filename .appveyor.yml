@@ -1,14 +1,7 @@
-name: github-pages
-
-on:
-  push:
-    branches:
-      - master
-
 environment:
   nodejs_version: "20"
-  name: github-pages
-  url: ${{steps.deployment.outputs.psge_url}}
+  HOME: $(USERPROFILE)
+  GITHUB_TOKEN: $(github_token)
 
 cache: node_modules
 

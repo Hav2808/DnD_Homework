@@ -1,6 +1,8 @@
 environment:
   nodejs_version: "20"
-
+  name: github-pages
+  url: ${{steps.deployment.outputs.psge_url}}
+  
 branches:
   only:
     - main  # ветка git
